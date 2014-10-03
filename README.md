@@ -16,7 +16,7 @@ Setup
 
 First off add the composer dependency:
 
-    "require": {
+    "require-dev": {
         "stechstudio/codeception-laravel-unittest" : "0.1.*"
 
 Then of course update composer:
