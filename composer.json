@@ -1,0 +1,19 @@
+{
+    "name": "stechstudio/codeception-laravel-unittest",
+    "description": "",
+    "authors": [
+        {
+            "name": "Joseph Szobody",
+            "email": "joseph@stechstudio.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "STS\\Testing": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
