@@ -11,6 +11,8 @@ It is. However it can also run [unit tests](http://codeception.com/docs/06-UnitT
 
 If you are writing your functional/acceptance tests in Codeception (and I encourage it!) then it might be really nice to be able to run all your tests at once for end-to-end testing. This could make automated testing / CI a bit easier.
 
+And perhaps you also want to take advantage of both the Laravel and Codeception unit test helpers.
+
 Setup
 ====================
 
