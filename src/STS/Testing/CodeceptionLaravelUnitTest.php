@@ -17,7 +17,7 @@ class CodeceptionLaravelUnitTest extends \Codeception\TestCase\Test {
         $unitTesting = true;
         $testEnvironment = 'testing';
 
-        $basePath = $this->findAppPath();
+        $basePath = $this->findBasePath();
         return require $basePath . '/bootstrap/start.php';
     }
 
@@ -52,7 +52,7 @@ class CodeceptionLaravelUnitTest extends \Codeception\TestCase\Test {
      *
      * @return string
      */
-    protected function findAppPath()
+    protected function findBasePath()
     {
         // Assuming that tests are running inside a folder called /test/..., and that folder
         // is in the base Laravel folder, this is easy.
