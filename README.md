@@ -3,7 +3,7 @@ Unit Test class for Codeception and Laravel 5
 
 This class allows you to write [Codeception](http://codeception.com/) unit tests with all the same goodies (helpers, facade mocking, etc) that the [default Laravel testing](http://laravel.com/docs/4.2/testing) provides.
 
-**Wait, _unit tests_ in Codeception? I thought Codeception was for functional and acceptance testing?**
+**Wait, _unit_ tests in Codeception? I thought Codeception was for functional and acceptance testing?**
 
 It is. However it can also run [unit tests](http://codeception.com/docs/06-UnitTests) where it "uses PHPUnit as a backend" and adds a few nice helpers.
 
