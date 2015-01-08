@@ -18,7 +18,7 @@ class CodeceptionLaravelUnitTest extends \Codeception\TestCase\Test {
         $testEnvironment = 'testing';
 
         $basePath = $this->findBasePath();
-        return require $basePath . '/bootstrap/start.php';
+        return require $basePath . '/bootstrap/app.php';
     }
 
     /**
@@ -60,12 +60,12 @@ class CodeceptionLaravelUnitTest extends \Codeception\TestCase\Test {
         $currentPath = $reflector->getFileName();
         $basePath = substr($currentPath,0, strpos($currentPath, "/tests/"));
 
-        if(file_exists($basePath . '/bootstrap/start.php')) {
+        if(file_exists($basePath . '/bootstrap/app.php')) {
             return $basePath;
         }
 
         // We couldn't figure it out automatically, let's look for help
-        if(defined('LARAVEL_BASE') && file_exists(LARAVEL_BASE . '/bootstrap/start.php')) {
+        if(defined('LARAVEL_BASE') && file_exists(LARAVEL_BASE . '/bootstrap/app.php')) {
             return LARAVEL_BASE;
         }
 
