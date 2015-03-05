@@ -3,8 +3,9 @@ namespace STS\Testing;
 
 use Illuminate\Foundation\Testing\ApplicationTrait;
 use Illuminate\Foundation\Testing\AssertionsTrait;
+use Codeception\TestCase\Test;
 
-class CodeceptionLaravelUnitTest extends \Codeception\TestCase\Test {
+class CodeceptionLaravelUnitTest extends Test {
     use ApplicationTrait, AssertionsTrait;
 
     /**
@@ -14,11 +15,11 @@ class CodeceptionLaravelUnitTest extends \Codeception\TestCase\Test {
      */
     public function createApplication()
     {
-        $unitTesting = true;
-        $testEnvironment = 'testing';
-
         $basePath = $this->findBasePath();
-        return require $basePath . '/bootstrap/app.php';
+        $app = require $basePath . '/bootstrap/app.php';
+        $app->make('Illuminate\Contracts\Console\Kernel')->bootstrap();
+
+        return $app;
     }
 
     /**
@@ -43,7 +44,11 @@ class CodeceptionLaravelUnitTest extends \Codeception\TestCase\Test {
      */
     public function tearDown()
     {
-        $this->app->flush();
+        if ($this->app)
+        {
+            $this->app->flush();
+        }
+
         return parent::tearDown();
     }
 
