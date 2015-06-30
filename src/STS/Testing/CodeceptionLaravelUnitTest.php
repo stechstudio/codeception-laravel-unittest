@@ -3,11 +3,14 @@ namespace STS\Testing;
 
 use Illuminate\Foundation\Testing\ApplicationTrait;
 use Illuminate\Foundation\Testing\AssertionsTrait;
+use Illuminate\Foundation\Testing\CrawlerTrait;
 use Codeception\TestCase\Test;
 
 class CodeceptionLaravelUnitTest extends Test {
-    use ApplicationTrait, AssertionsTrait;
+    use ApplicationTrait, AssertionsTrait, CrawlerTrait;
 
+	 protected $baseUrl = 'http://localhost';
+	 
     /**
      * Creates the application.
      *
