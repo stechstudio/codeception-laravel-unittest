@@ -1,3 +1,5 @@
+**This package is no longer maintained. Laravel's built-in testing capabilities have almost entirely replaced Codeception for me, especially with the introduction of Laravel Dusk (browser tests) in Laravel 5.4. If you would like to maintain this package, fork it, let me know, and I'll link to your fork others to reference.**
+
 Unit Test class for Codeception and Laravel 5
 ====================
 
